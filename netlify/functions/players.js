@@ -193,12 +193,11 @@ exports.handler = async function (event, context) {
         }
     ];
 
+    const imageFolder = path.join(__dirname, 'images');
 
-    const basePath = path.use('/.netlify/functions/players/images', express.static(__dirname + '/netlify/functions/images'))
-
-
-    if (event.path.startsWith('/.netlify/functions/players/images')) {
-        const imagePath = path.join(basePath, event.path.replace('/.netlify/functions/players/images', ''));
+    // Verificăm dacă cererea este pentru o imagine
+    if (event.path.startsWith('/.netlify/functions/players/images/')) {
+        const imagePath = path.join(imageFolder, event.path.replace('/.netlify/functions/players/images/', ''));
         try {
             const image = fs.readFileSync(imagePath);
             const ext = path.extname(imagePath).substring(1);
@@ -228,6 +227,7 @@ exports.handler = async function (event, context) {
         }
     }
 
+    // Gestionăm cererile pentru datele JSON
     return {
         statusCode: 200,
         body: JSON.stringify(playersData),
