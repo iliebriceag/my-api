@@ -1,4 +1,7 @@
+
+
 exports.handler = async function(event, context) {
+
     const playersData = [
         {
             "id": 1,
@@ -190,7 +193,10 @@ exports.handler = async function(event, context) {
         statusCode: 200,
         body: JSON.stringify(playersData),
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*', // Permite toate originea
+            'Access-Control-Allow-Methods': 'GET', // Permite metodele GET
+            'Access-Control-Allow-Headers': 'Content-Type' // Permite anteturile Content-Type
         }
     };
 };
