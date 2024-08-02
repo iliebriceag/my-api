@@ -190,7 +190,7 @@ exports.handler = async function(event, context) {
     ];
 
 
-    const basePath = path.join(__dirname, '../../public');
+    const basePath = path.join(__dirname, '../../public/images');
 
     if (event.path.startsWith('/.netlify/functions/players/images')) {
         const imagePath = path.join(basePath, event.path.replace('/.netlify/functions/players/images', ''));
