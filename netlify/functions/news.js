@@ -8,7 +8,7 @@ exports.handler = async function(event, context) {
             "name": "Cristiano Ronaldo",
             "title": "Goluri și Realizări",
             "description": "Cristiano Ronaldo este cunoscut pentru abilitatea sa incredibilă de a marca goluri și pentru realizările sale impresionante în fotbal.",
-            "data": "2024-08-01",
+            "data": "2024-03-21",
             "imagine": "https://cdn.pixabay.com/photo/2023/11/07/20/24/cristiano-ronaldo-8373364_1280.jpg"
         },
         {
@@ -16,7 +16,7 @@ exports.handler = async function(event, context) {
             "name": "Lionel Messi",
             "title": "Dribling și Creativitate",
             "description": "Lionel Messi este recunoscut pentru driblingul său excelent și creativitatea sa pe teren.",
-            "data": "2024-08-01",
+            "data": "2024-02-01",
             "imagine": "https://cdn.pixabay.com/photo/2017/01/25/17/20/lionel-2008448_1280.jpg"
         },
         {
@@ -24,7 +24,7 @@ exports.handler = async function(event, context) {
             "name": "Neymar Jr.",
             "title": "Tehnică și Viteză",
             "description": "Neymar Jr. este un jucător de fotbal remarcabil datorită tehnicii sale rafinate și vitezei sale extraordinare.",
-            "data": "2024-08-01",
+            "data": "2024-08-11",
             "imagine": "https://cdn.pixabay.com/photo/2016/02/15/18/50/brazil-germany-1201762_960_720.jpg"
         },
         {
@@ -32,7 +32,7 @@ exports.handler = async function(event, context) {
             "name": "Kylian Mbappe",
             "title": "Tineret și Viteză",
             "description": "Kylian Mbappe este un star tânăr în fotbal, cunoscut pentru viteza și agilitatea sa.",
-            "data": "2024-08-01",
+            "data": "2024-08-13",
             "imagine": "https://cdn.pixabay.com/photo/2022/06/08/10/00/kylian-mbappe-7250181_1280.jpg"
         },
         {
@@ -40,7 +40,7 @@ exports.handler = async function(event, context) {
             "name": "Mohamed Salah",
             "title": "Perseverență și Talent",
             "description": "Mohamed Salah a devenit unul dintre cei mai buni jucători din lume prin perseverența și talentul său.",
-            "data": "2024-08-01",
+            "data": "2024-05-30",
             "imagine": "https://i.pinimg.com/originals/58/83/ab/5883ab7cb651a251b364c15609a81a4f.jpg"
         },
         {
@@ -189,14 +189,44 @@ exports.handler = async function(event, context) {
         }
     ];
 
-    return {
-        statusCode: 200,
-        body: JSON.stringify(playersData),
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*', // Permite toate originea
-            'Access-Control-Allow-Methods': 'GET', // Permite metodele GET
-            'Access-Control-Allow-Headers': 'Content-Type' // Permite anteturile Content-Type
+    const id = event.queryStringParameters && event.queryStringParameters.id;
+
+    if (id) {
+        const player = playersData.find(p => p.id === parseInt(id));
+
+        if (player) {
+            return {
+                statusCode: 200,
+                body: JSON.stringify(player),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET',
+                    'Access-Control-Allow-Headers': 'Content-Type'
+                }
+            };
+        } else {
+            return {
+                statusCode: 404,
+                body: JSON.stringify({ message: 'Player not found' }),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET',
+                    'Access-Control-Allow-Headers': 'Content-Type'
+                }
+            };
         }
-    };
+    } else {
+        return {
+            statusCode: 200,
+            body: JSON.stringify(playersData),
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET',
+                'Access-Control-Allow-Headers': 'Content-Type'
+            }
+        };
+    }
 };
