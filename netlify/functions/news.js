@@ -1,3 +1,6 @@
+const cors = require('cors')
+app.use(cors())
+
 exports.handler = async function(event, context) {
     const playersData = [
         {
