@@ -1,11 +1,4 @@
-const express = require('express');
-const path = require('path');
-const fs = require('fs');
-
-const app = express();
-
-
-exports.handler = async function (event, context) {
+exports.handler = async function(event, context) {
     const playersData = [
         {
             "id": 1,
@@ -13,7 +6,7 @@ exports.handler = async function (event, context) {
             "title": "Goluri și Realizări",
             "description": "Cristiano Ronaldo este cunoscut pentru abilitatea sa incredibilă de a marca goluri și pentru realizările sale impresionante în fotbal.",
             "data": "2024-08-01",
-            "imagine": "https://example.com/images/cristiano_ronaldo.jpg"
+            "imagine": "https://cdn.pixabay.com/photo/2015/01/26/22/40/child-613199_1280.jpg"
         },
         {
             "id": 2,
@@ -21,7 +14,7 @@ exports.handler = async function (event, context) {
             "title": "Dribling și Creativitate",
             "description": "Lionel Messi este recunoscut pentru driblingul său excelent și creativitatea sa pe teren.",
             "data": "2024-08-01",
-            "imagine": "https://example.com/images/lionel_messi.jpg"
+            "imagine": "https://cdn.pixabay.com/photo/2016/11/29/07/06/bleachers-1867992_1280.jpg"
         },
         {
             "id": 3,
@@ -193,41 +186,6 @@ exports.handler = async function (event, context) {
         }
     ];
 
-    const imageFolder = path.join(__dirname, 'images');
-
-    // Verificăm dacă cererea este pentru o imagine
-    if (event.path.startsWith('/.netlify/functions/players/images/')) {
-        const imagePath = path.join(imageFolder, event.path.replace('/.netlify/functions/players/images/', ''));
-        try {
-            const image = fs.readFileSync(imagePath);
-            const ext = path.extname(imagePath).substring(1);
-            const mimeType = {
-                jpg: 'image/jpeg',
-                jpeg: 'image/jpeg',
-                png: 'image/png',
-                gif: 'image/gif'
-            }[ext] || 'application/octet-stream';
-
-            return {
-                statusCode: 200,
-                body: image.toString('base64'),
-                isBase64Encoded: true,
-                headers: {
-                    'Content-Type': mimeType
-                }
-            };
-        } catch (err) {
-            return {
-                statusCode: 404,
-                body: JSON.stringify({ message: 'Imaginea nu a fost găsită' }),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            };
-        }
-    }
-
-    // Gestionăm cererile pentru datele JSON
     return {
         statusCode: 200,
         body: JSON.stringify(playersData),
