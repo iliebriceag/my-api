@@ -190,7 +190,7 @@ exports.handler = async function (event, context) {
     ];
 
 
-    const basePath = path.use('/images', express.static(__dirname + '/images'))
+    const basePath = path.use('/.netlify/functions/players/images', express.static(__dirname + '/netlify/functions/images'))
 
 
     if (event.path.startsWith('/.netlify/functions/players/images')) {
