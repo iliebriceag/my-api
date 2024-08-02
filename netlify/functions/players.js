@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-exports.handler = async function(event, context) {
+exports.handler = async function (event, context) {
     const playersData = [
         {
             "id": 1,
@@ -190,7 +190,9 @@ exports.handler = async function(event, context) {
     ];
 
 
-    const basePath = path.join(__dirname, 'images');
+    // const basePath = path.join(__dirname, 'images');
+    basePath.use('/images', express.static(__dirname + '/images'))
+
 
     if (event.path.startsWith('/.netlify/functions/players/images')) {
         const imagePath = path.join(basePath, event.path.replace('/.netlify/functions/players/images', ''));
