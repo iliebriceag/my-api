@@ -9,7 +9,7 @@ exports.handler = async function(event, context) {
             "title": "Goluri și Realizări",
             "description": "Cristiano Ronaldo este cunoscut pentru abilitatea sa incredibilă de a marca goluri și pentru realizările sale impresionante în fotbal.",
             "data": "2024-08-01",
-            "imagine": "https://cdn.pixabay.com/photo/2015/01/26/22/40/child-613199_1280.jpg"
+            "imagine": "https://cdn.pixabay.com/photo/2023/11/07/20/24/cristiano-ronaldo-8373364_1280.jpg"
         },
         {
             "id": 2,
@@ -17,7 +17,7 @@ exports.handler = async function(event, context) {
             "title": "Dribling și Creativitate",
             "description": "Lionel Messi este recunoscut pentru driblingul său excelent și creativitatea sa pe teren.",
             "data": "2024-08-01",
-            "imagine": "https://cdn.pixabay.com/photo/2016/11/29/07/06/bleachers-1867992_1280.jpg"
+            "imagine": "https://cdn.pixabay.com/photo/2017/01/25/17/20/lionel-2008448_1280.jpg"
         },
         {
             "id": 3,
@@ -25,7 +25,7 @@ exports.handler = async function(event, context) {
             "title": "Tehnică și Viteză",
             "description": "Neymar Jr. este un jucător de fotbal remarcabil datorită tehnicii sale rafinate și vitezei sale extraordinare.",
             "data": "2024-08-01",
-            "imagine": "https://example.com/images/neymar_jr.jpg"
+            "imagine": "https://cdn.pixabay.com/photo/2016/02/15/18/50/brazil-germany-1201762_960_720.jpg"
         },
         {
             "id": 4,
@@ -33,7 +33,7 @@ exports.handler = async function(event, context) {
             "title": "Tineret și Viteză",
             "description": "Kylian Mbappe este un star tânăr în fotbal, cunoscut pentru viteza și agilitatea sa.",
             "data": "2024-08-01",
-            "imagine": "https://example.com/images/kylian_mbappe.jpg"
+            "imagine": "https://cdn.pixabay.com/photo/2022/06/08/10/00/kylian-mbappe-7250181_1280.jpg"
         },
         {
             "id": 5,
@@ -41,7 +41,7 @@ exports.handler = async function(event, context) {
             "title": "Perseverență și Talent",
             "description": "Mohamed Salah a devenit unul dintre cei mai buni jucători din lume prin perseverența și talentul său.",
             "data": "2024-08-01",
-            "imagine": "https://example.com/images/mohamed_salah.jpg"
+            "imagine": "https://i.pinimg.com/originals/58/83/ab/5883ab7cb651a251b364c15609a81a4f.jpg"
         },
         {
             "id": 6,
@@ -49,7 +49,7 @@ exports.handler = async function(event, context) {
             "title": "Apărare și Lider",
             "description": "Sergio Ramos este un apărător de top și un lider pe teren.",
             "data": "2024-08-01",
-            "imagine": "https://example.com/images/sergio_ramos.jpg"
+            "imagine": "https://w0.peakpx.com/wallpaper/40/165/HD-wallpaper-sergio-ramos-real-madrid-sergio-ramos-spain-thumbnail.jpg"
         },
         {
             "id": 7,
@@ -57,7 +57,7 @@ exports.handler = async function(event, context) {
             "title": "Mijlocaș și Viziune",
             "description": "Luka Modric este un mijlocaș excelent cunoscut pentru viziunea sa pe teren și abilitatea de a controla jocul.",
             "data": "2024-08-01",
-            "imagine": "https://example.com/images/luka_modric.jpg"
+            "imagine": "https://i.pinimg.com/originals/fe/4c/c3/fe4cc3021a48226100248c0acc7de29b.jpg"
         },
         {
             "id": 8,
@@ -65,7 +65,7 @@ exports.handler = async function(event, context) {
             "title": "Apărare și Forță",
             "description": "Virgil van Dijk este cunoscut pentru forța și abilitatea sa defensivă.",
             "data": "2024-08-01",
-            "imagine": "https://example.com/images/virgil_van_dijk.jpg"
+            "imagine": "https://i.pinimg.com/originals/c2/f6/43/c2f643949d8c40f6de68c8f829c79c6b.jpg"
         },
         {
             "id": 9,
@@ -73,7 +73,7 @@ exports.handler = async function(event, context) {
             "title": "Creativitate și Pasare",
             "description": "Kevin De Bruyne este un mijlocaș creativ, renumit pentru pasele și viziunea sa.",
             "data": "2024-08-01",
-            "imagine": "https://example.com/images/kevin_de_bruyne.jpg"
+            "imagine": "https://i.pinimg.com/originals/5b/97/d1/5b97d1314acb51869e53a05700a9f3ff.jpg"
         },
         {
             "id": 10,
