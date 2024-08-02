@@ -5,3 +5,8 @@
   from = "/api/players"
   to = "/.netlify/functions/players"
   status = 200
+
+[[redirects]]
+  from = "/images/*"
+  to = "/.netlify/functions/players/images/:splat"
+  status = 200

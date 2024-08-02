@@ -189,6 +189,40 @@ exports.handler = async function(event, context) {
         }
     ];
 
+
+    const basePath = path.join(__dirname, '../../public');
+
+    if (event.path.startsWith('/.netlify/functions/players/images')) {
+        const imagePath = path.join(basePath, event.path.replace('/.netlify/functions/players/images', ''));
+        try {
+            const image = fs.readFileSync(imagePath);
+            const ext = path.extname(imagePath).substring(1);
+            const mimeType = {
+                jpg: 'image/jpeg',
+                jpeg: 'image/jpeg',
+                png: 'image/png',
+                gif: 'image/gif'
+            }[ext] || 'application/octet-stream';
+
+            return {
+                statusCode: 200,
+                body: image.toString('base64'),
+                isBase64Encoded: true,
+                headers: {
+                    'Content-Type': mimeType
+                }
+            };
+        } catch (err) {
+            return {
+                statusCode: 404,
+                body: JSON.stringify({ message: 'Imaginea nu a fost găsită' }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            };
+        }
+    }
+
     return {
         statusCode: 200,
         body: JSON.stringify(playersData),
@@ -197,4 +231,3 @@ exports.handler = async function(event, context) {
         }
     };
 };
-
