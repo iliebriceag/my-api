@@ -1,5 +1,12 @@
+const express = require('express');
+const path = require('path');
+const fs = require('fs');
+
+
 const cors = require('cors')
 app.use(cors())
+
+const app = express();
 
 exports.handler = async function(event, context) {
     const playersData = [
