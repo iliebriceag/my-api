@@ -2,7 +2,7 @@
   functions = "netlify/functions"
 
 [[redirects]]
-  from = "/api/news"
-  to = "/.netlify/functions/news"
+  from = "/api/players"
+  to = "/.netlify/functions/players"
   status = 200
 
