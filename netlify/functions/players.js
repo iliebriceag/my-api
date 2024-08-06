@@ -3,16 +3,26 @@ exports.handler = async function(event, context) {
     const playersData = [
         {
             "id": 1,
-            "name": "Cristiano Ronaldo",
-            "title": "Goluri și Realizări",
-            "description": "Cristiano Ronaldo este cunoscut pentru abilitatea sa incredibilă de a marca goluri și pentru realizările sale impresionante în fotbal.",
-            "data": "2024-03-21",
-            "image": "https://cdn.pixabay.com/photo/2023/11/07/20/24/cristiano-ronaldo-8373364_1280.jpg",
-            "category": "Atacant",
-            "current_team": "Al Nassr"
+            "name": "Andrei Rațiu",
+            "title": "Apărare și Energie",
+            "description": "Andrei Rațiu este un jucător de fotbal talentat, cunoscut pentru energia sa și abilitățile defensive.",
+            "data": "2024-06-10",
+            "image": "https://sportpesurse.ro/wp-content/uploads/2024/07/profimedia-0887615946.jpg",
+            "category": "Fundaș",
+            "current_team": "Rayo Vallecano"
         },
         {
             "id": 2,
+            "name": "Nicolae Stanciu",
+            "title": "Creativitate și Pasare",
+            "description": "Nicolae Stanciu este cunoscut pentru creativitatea și abilitatea sa de a face pase decisive.",
+            "data": "2024-02-01",
+            "image": "https://tmssl.akamaized.net/images/foto/galerie/nicolae-stanciu-romnaia-euro-2024-1719301358-140785.jpg",
+            "category": "Mijlocaș",
+            "current_team": "Dhamk Club"
+        },
+        {
+            "id": 3,
             "name": "Lionel Messi",
             "title": "Dribling și Creativitate",
             "description": "Lionel Messi este recunoscut pentru driblingul său excelent și creativitatea sa pe teren.",
@@ -22,19 +32,19 @@ exports.handler = async function(event, context) {
             "current_team": "Inter Miami"
         },
         {
-            "id": 3,
-            "name": "Neymar Jr.",
-            "title": "Tehnică și Viteză",
-            "description": "Neymar Jr. este un jucător de fotbal remarcabil datorită tehnicii sale rafinate și vitezei sale extraordinare.",
-            "data": "2024-08-11",
-            "image": "https://cdn.pixabay.com/photo/2016/02/15/18/50/brazil-germany-1201762_960_720.jpg",
+            "id": 4,
+            "name": "Cristiano Ronaldo",
+            "title": "Goluri și Realizări",
+            "description": "Cristiano Ronaldo este cunoscut pentru abilitatea sa incredibilă de a marca goluri și pentru realizările sale impresionante în fotbal.",
+            "data": "2024-03-21",
+            "image": "https://cdn.pixabay.com/photo/2023/11/07/20/24/cristiano-ronaldo-8373364_1280.jpg",
             "category": "Atacant",
-            "current_team": "Al Hilal"
+            "current_team": "Al Nassr"
         },
         {
-            "id": 4,
+            "id": 5,
             "name": "Kylian Mbappe",
-            "title": "Tineret și Viteză",
+            "title": "Viteză",
             "description": "Kylian Mbappe este un star tânăr în fotbal, cunoscut pentru viteza și agilitatea sa.",
             "data": "2024-08-13",
             "image": "https://cdn.pixabay.com/photo/2022/06/08/10/00/kylian-mbappe-7250181_1280.jpg",
@@ -42,7 +52,7 @@ exports.handler = async function(event, context) {
             "current_team": "Paris Saint-Germain"
         },
         {
-            "id": 5,
+            "id": 6,
             "name": "Mohamed Salah",
             "title": "Perseverență și Talent",
             "description": "Mohamed Salah a devenit unul dintre cei mai buni jucători din lume prin perseverența și talentul său.",
@@ -52,7 +62,7 @@ exports.handler = async function(event, context) {
             "current_team": "Liverpool"
         },
         {
-            "id": 6,
+            "id": 7,
             "name": "Sergio Ramos",
             "title": "Apărare și Lider",
             "description": "Sergio Ramos este un apărător de top și un lider pe teren.",
@@ -62,7 +72,7 @@ exports.handler = async function(event, context) {
             "current_team": "Sevilla"
         },
         {
-            "id": 7,
+            "id": 8,
             "name": "Luka Modric",
             "title": "Mijlocaș și Viziune",
             "description": "Luka Modric este un mijlocaș excelent cunoscut pentru viziunea sa pe teren și abilitatea de a controla jocul.",
@@ -72,7 +82,7 @@ exports.handler = async function(event, context) {
             "current_team": "Real Madrid"
         },
         {
-            "id": 8,
+            "id": 9,
             "name": "Virgil van Dijk",
             "title": "Apărare și Forță",
             "description": "Virgil van Dijk este cunoscut pentru forța și abilitatea sa defensivă.",
@@ -82,7 +92,7 @@ exports.handler = async function(event, context) {
             "current_team": "Liverpool"
         },
         {
-            "id": 9,
+            "id": 10,
             "name": "Kevin De Bruyne",
             "title": "Creativitate și Pasare",
             "description": "Kevin De Bruyne este un mijlocaș creativ, renumit pentru pasele și viziunea sa.",
@@ -92,7 +102,7 @@ exports.handler = async function(event, context) {
             "current_team": "Manchester City"
         },
         {
-            "id": 10,
+            "id": 11,
             "name": "Robert Lewandowski",
             "title": "Marcator și Tehnică",
             "description": "Robert Lewandowski este unul dintre cei mai buni atacanți din lume, cunoscut pentru tehnica și abilitatea sa de a marca.",
@@ -102,7 +112,7 @@ exports.handler = async function(event, context) {
             "current_team": "Barcelona"
         },
         {
-            "id": 11,
+            "id": 12,
             "name": "Eden Hazard",
             "title": "Agilitate și Dribling",
             "description": "Eden Hazard este un jucător talentat cunoscut pentru agilitatea și driblingul său.",
@@ -112,7 +122,7 @@ exports.handler = async function(event, context) {
             "current_team": "Free Agent"
         },
         {
-            "id": 12,
+            "id": 13,
             "name": "Antoine Griezmann",
             "title": "Versatilitate și Tehnică",
             "description": "Antoine Griezmann este cunoscut pentru versatilitatea și tehnica sa pe teren.",
@@ -122,7 +132,7 @@ exports.handler = async function(event, context) {
             "current_team": "Atletico Madrid"
         },
         {
-            "id": 13,
+            "id": 14,
             "name": "Paulo Dybala",
             "title": "Creativitate și Viteză",
             "description": "Paulo Dybala este un jucător creativ și rapid.",
@@ -132,7 +142,7 @@ exports.handler = async function(event, context) {
             "current_team": "AS Roma"
         },
         {
-            "id": 14,
+            "id": 15,
             "name": "Sadio Mane",
             "title": "Viteză și Dribling",
             "description": "Sadio Mane este cunoscut pentru viteza și driblingul său impresionant.",
@@ -142,7 +152,7 @@ exports.handler = async function(event, context) {
             "current_team": "Al Nassr"
         },
         {
-            "id": 15,
+            "id": 16,
             "name": "Paul Pogba",
             "title": "Forță și Creativitate",
             "description": "Paul Pogba este un mijlocaș puternic și creativ.",
@@ -152,7 +162,7 @@ exports.handler = async function(event, context) {
             "current_team": "Juventus"
         },
         {
-            "id": 16,
+            "id": 17,
             "name": "Romelu Lukaku",
             "title": "Forță și Goluri",
             "description": "Romelu Lukaku este cunoscut pentru forța și abilitatea sa de a marca goluri.",
@@ -162,7 +172,7 @@ exports.handler = async function(event, context) {
             "current_team": "AS Roma"
         },
         {
-            "id": 17,
+            "id": 18,
             "name": "Raheem Sterling",
             "title": "Viteză și Finalizare",
             "description": "Raheem Sterling este un jucător rapid și eficient în fața porții.",
@@ -172,7 +182,7 @@ exports.handler = async function(event, context) {
             "current_team": "Chelsea"
         },
         {
-            "id": 18,
+            "id": 19,
             "name": "Gareth Bale",
             "title": "Viteză și Tehnică",
             "description": "Gareth Bale este cunoscut pentru viteza și tehnica sa pe teren.",
@@ -182,7 +192,7 @@ exports.handler = async function(event, context) {
             "current_team": "Retired"
         },
         {
-            "id": 19,
+            "id": 20,
             "name": "Harry Kane",
             "title": "Finalizare și Tehnică",
             "description": "Harry Kane este un atacant remarcabil, cunoscut pentru finalizarea și tehnica sa.",
@@ -192,7 +202,7 @@ exports.handler = async function(event, context) {
             "current_team": "Bayern Munich"
         },
         {
-            "id": 20,
+            "id": 21,
             "name": "Luis Suarez",
             "title": "Aggresivitate și Goluri",
             "description": "Luis Suarez este cunoscut pentru agresivitatea și abilitatea sa de a marca goluri.",
@@ -202,7 +212,7 @@ exports.handler = async function(event, context) {
             "current_team": "Gremio"
         },
         {
-            "id": 21,
+            "id": 22,
             "name": "Karim Benzema",
             "title": "Eleganță și Finalizare",
             "description": "Karim Benzema este cunoscut pentru eleganța și abilitatea sa de a finaliza.",
@@ -212,7 +222,7 @@ exports.handler = async function(event, context) {
             "current_team": "Al Ittihad"
         },
         {
-            "id": 22,
+            "id": 23,
             "name": "Toni Kroos",
             "title": "Control și Pasare",
             "description": "Toni Kroos este cunoscut pentru controlul său excelent al mingii și abilități de pasare.",
@@ -222,7 +232,7 @@ exports.handler = async function(event, context) {
             "current_team": "Real Madrid"
         },
         {
-            "id": 23,
+            "id": 24,
             "name": "N'Golo Kante",
             "title": "Muncă și Interceptare",
             "description": "N'Golo Kante este cunoscut pentru etica sa de muncă și abilitatea de a intercepta pasele adversarilor.",
@@ -230,6 +240,16 @@ exports.handler = async function(event, context) {
             "image": "https://i.pinimg.com/originals/c1/fe/b2/c1feb2206faa57dc40594cf3d42a46b0.jpg",
             "category": "Mijlocaș",
             "current_team": "Al Ittihad"
+        },
+        {
+            "id": 25,
+            "name": "Neymar Jr.",
+            "title": "Tehnică și Viteză",
+            "description": "Neymar Jr. este un jucător de fotbal remarcabil datorită tehnicii sale rafinate și vitezei sale extraordinare.",
+            "data": "2024-08-11",
+            "image": "https://cdn.pixabay.com/photo/2016/02/15/18/50/brazil-germany-1201762_960_720.jpg",
+            "category": "Atacant",
+            "current_team": "Al Hilal"
         }
     ];
 
